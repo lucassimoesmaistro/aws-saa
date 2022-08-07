@@ -52,10 +52,17 @@ variable "public_subnets" {
   default     = ["10.0.16.0/20", "10.0.48.0/20", "10.0.80.0/20"]
 }
 
-# variable "service_desired_count" {
-#   description = "Number of tasks running in parallel"
-#   default     = 2
-# }
+variable "service_desired_count" {
+  description = "Number of tasks running in parallel"
+  default     = 2
+}
+
+
+
+variable "container_image" {
+  default     = "nginxdemos/hello"
+}
+
 
 variable "container_port" {
   description = "The port where the Docker is exposed"
@@ -72,10 +79,10 @@ variable "container_memory" {
   default     = 512
 }
 
-# variable "health_check_path" {
-#   description = "Http path for task health check"
-#   default     = "/health"
-# }
+variable "health_check_path" {
+  description = "Http path for task health check"
+  default     = "/health"
+}
 
 # variable "tsl_certificate_arn" {
 #   description = "The ARN of the certificate that the ALB uses for https"
