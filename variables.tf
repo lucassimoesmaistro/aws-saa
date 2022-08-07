@@ -18,13 +18,13 @@ variable "aws-region" {
   default     = "sa-east-1"
 }
 
-# variable "aws-access-key" {
-#   type = string
-# }
+variable "aws-access-key" {
+  type = string
+}
 
-# variable "aws-secret-key" {
-#   type = string
-# }
+variable "aws-secret-key" {
+  type = string
+}
 
 # variable "application-secrets" {
 #   description = "A map of secrets that is passed into the application. Formatted like ENV_VAR = VALUE"
