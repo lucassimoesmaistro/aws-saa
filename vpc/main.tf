@@ -9,14 +9,14 @@ resource "aws_vpc" "main" {
   }
 }
 
-resource "aws_internet_gateway" "main" {
-  vpc_id = aws_vpc.main.id
+# resource "aws_internet_gateway" "main" {
+#   vpc_id = aws_vpc.main.id
 
-  tags = {
-    Name        = "${var.name}-igw-${var.environment}"
-    Environment = var.environment
-  }
-}
+#   tags = {
+#     Name        = "${var.name}-igw-${var.environment}"
+#     Environment = var.environment
+#   }
+# }
 
 # resource "aws_nat_gateway" "main" {
 #   count         = length(var.private_subnets)
@@ -65,14 +65,14 @@ resource "aws_subnet" "public" {
   }
 }
 
-resource "aws_route_table" "public" {
-  vpc_id = aws_vpc.main.id
+# resource "aws_route_table" "public" {
+#   vpc_id = aws_vpc.main.id
 
-  tags = {
-    Name        = "${var.name}-routing-table-public"
-    Environment = var.environment
-  }
-}
+#   tags = {
+#     Name        = "${var.name}-routing-table-public"
+#     Environment = var.environment
+#   }
+# }
 
 # resource "aws_route" "public" {
 #   route_table_id         = aws_route_table.public.id
