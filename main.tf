@@ -46,13 +46,13 @@ module "vpc" {
   environment        = var.environment
 }
 
-# module "security_groups" {
-#   source         = "./security-groups"
-#   name           = var.name
-#   vpc_id         = module.vpc.id
-#   environment    = var.environment
-#   container_port = var.container_port
-# }
+module "security_groups" {
+  source         = "./security-groups"
+  name           = var.name
+  vpc_id         = module.vpc.id
+  environment    = var.environment
+  container_port = var.container_port
+}
 
 # module "alb" {
 #   source              = "./alb"

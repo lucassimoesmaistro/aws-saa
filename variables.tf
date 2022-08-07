@@ -57,20 +57,20 @@ variable "public_subnets" {
 #   default     = 2
 # }
 
-# variable "container_port" {
-#   description = "The port where the Docker is exposed"
-#   default     = 8000
-# }
+variable "container_port" {
+  description = "The port where the Docker is exposed"
+  default     = 8000
+}
 
-# variable "container_cpu" {
-#   description = "The number of cpu units used by the task"
-#   default     = 256
-# }
+variable "container_cpu" {
+  description = "The number of cpu units used by the task"
+  default     = 256
+}
 
-# variable "container_memory" {
-#   description = "The amount (in MiB) of memory used by the task"
-#   default     = 512
-# }
+variable "container_memory" {
+  description = "The amount (in MiB) of memory used by the task"
+  default     = 512
+}
 
 # variable "health_check_path" {
 #   description = "Http path for task health check"
