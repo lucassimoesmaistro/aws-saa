@@ -66,7 +66,7 @@ variable "container_image" {
 
 variable "container_port" {
   description = "The port where the Docker is exposed"
-  default     = 8000
+  default     = 80
 }
 
 variable "container_cpu" {
@@ -81,7 +81,7 @@ variable "container_memory" {
 
 variable "health_check_path" {
   description = "Http path for task health check"
-  default     = "/health"
+  default     = "/"
 }
 
 # variable "tsl_certificate_arn" {
